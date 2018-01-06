@@ -996,7 +996,8 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      zipcode: '10011'
+      zipcode: '10011',
+      data: {}
     };
     _this.updateZip = _this.updateZip.bind(_this);
     return _this;
@@ -1008,15 +1009,16 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'updateZip',
     value: function updateZip(zip) {
+      var _this2 = this;
 
       this.setState({ zipcode: zip });
       fetch("http://api.wunderground.com/api/" + apikey + "/conditions/q/10004.json").then(function (r) {
         return r.json();
       }).then(function (weather) {
-        console.log(weather);
+        _this2.setState({ data: weather });console.log(weather);
       });
       //let weatherObj = response.json()
-      console.log("HEllo");
+      console.log(this.state.data);
     }
   }, {
     key: 'render',
@@ -1034,7 +1036,7 @@ var App = function (_React$Component) {
           'h1',
           null,
           ' ',
-          this.state.zipcode
+          this.state.data.feelslike_f
         )
       );
     }

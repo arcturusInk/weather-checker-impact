@@ -6,7 +6,8 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      zipcode: '10011'
+      zipcode: '10011',
+      data: {}
     }
     this.updateZip = this.updateZip.bind(this)
   }
@@ -17,9 +18,9 @@ class App extends React.Component {
     this.setState({zipcode: zip})
     fetch("http://api.wunderground.com/api/" + apikey + "/conditions/q/10004.json")
     .then(r => r.json())
-    .then(weather => {console.log(weather)})
+    .then(weather => {this.setState({data: weather});console.log(weather)})
     //let weatherObj = response.json()
-    console.log("HEllo")
+    console.log(this.state.data)
   }
 
   render() {
@@ -27,7 +28,7 @@ class App extends React.Component {
       <div className="container">
         <h1>What's the weather?</h1>
         <ZipForm zipfunc = {this.updateZip}/>
-          <h1> {this.state.zipcode}</h1>
+          <h1> {this.state.data.feelslike_f}</h1>
       </div>
 
     )
