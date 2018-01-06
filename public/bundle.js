@@ -1008,7 +1008,15 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'updateZip',
     value: function updateZip(zip) {
+
       this.setState({ zipcode: zip });
+      fetch("http://api.wunderground.com/api/" + apikey + "/conditions/q/10004.json").then(function (r) {
+        return r.json();
+      }).then(function (weather) {
+        console.log(weather);
+      });
+      //let weatherObj = response.json()
+      console.log("HEllo");
     }
   }, {
     key: 'render',

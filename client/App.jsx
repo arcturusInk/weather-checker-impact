@@ -13,8 +13,15 @@ class App extends React.Component {
 
   //Write a method that takes a zipcode, and updates the state with that zipcode. Don’t forget to bind this method to the App class!
   updateZip(zip) {
+
     this.setState({zipcode: zip})
+    fetch("http://api.wunderground.com/api/" + apikey + "/conditions/q/10004.json")
+    .then(r => r.json())
+    .then(weather => {console.log(weather)})
+    //let weatherObj = response.json()
+    console.log("HEllo")
   }
+
   render() {
     return (
       <div className="container">
