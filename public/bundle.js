@@ -18357,66 +18357,9 @@ module.exports = camelize;
 
 /***/ }),
 /* 28 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ZipForm = function (_React$Component) {
-  _inherits(ZipForm, _React$Component);
-
-  function ZipForm() {
-    _classCallCheck(this, ZipForm);
-
-    return _possibleConstructorReturn(this, (ZipForm.__proto__ || Object.getPrototypeOf(ZipForm)).call(this));
-    // this.state = {
-    //   zipcode: props.zip
-    // }
-  }
-
-  _createClass(ZipForm, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return _react2.default.createElement(
-        "div",
-        { id: "zip-form" },
-        _react2.default.createElement("input", { id: "zipInput", placeholder: "Enter your Zip Code" }),
-        _react2.default.createElement(
-          "button",
-          { onClick: function onClick(event) {
-              event.preventDefault();
-              _this2.props.zipfunc(document.getElementById("zipInput").value);
-            } },
-          "Go"
-        )
-      );
-    }
-  }]);
-
-  return ZipForm;
-}(_react2.default.Component);
-
-exports.default = ZipForm;
+throw new Error("Module build failed: SyntaxError: Unexpected token (11:8)\n\n\u001b[0m \u001b[90m  9 | \u001b[39m    \u001b[90m// }\u001b[39m\n \u001b[90m 10 | \u001b[39m  }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m  \u001b[36mconst\u001b[39m clickHandler \u001b[33m=\u001b[39m (event) \u001b[33m=>\u001b[39m {\n \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 | \u001b[39m    \u001b[36mconst\u001b[39m value \u001b[33m=\u001b[39m event\u001b[33m.\u001b[39mtarget\n \u001b[90m 13 | \u001b[39m    console\u001b[33m.\u001b[39mlog(value)\n \u001b[90m 14 | \u001b[39m    \u001b[90m// event.preventDefault()\u001b[39m\u001b[0m\n");
 
 /***/ })
 /******/ ]);
